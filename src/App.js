@@ -6,7 +6,8 @@ import './App.css';
 
 class App extends Component {
   state = {
-    inputValue: ''
+    inputValue: '',
+    countValue: ''
   }
 
   inputChange = event => {
@@ -17,20 +18,23 @@ class App extends Component {
 
   render() {
     const { newValue, clickButton } = this.props;
+
+
     const { inputValue } = this.state;
     return (
       <div className="App" style={{ paddingTop: '10px' }}>
-        <input onChange={this.inputChange} type='text' value={inputValue} />
-        <button onClick={() => clickButton(inputValue)}>
-          Click me!
-        </button>
+        <input onChange={this.inputChange} type='text' value= {inputValue} />
+      
+        <button onClick={() => clickButton(inputValue)}> {newValue}</button>
+
         <h1>{newValue}</h1>
       </div>
     );
   }
 }
 const mapStateToProps = store => ({
-  newValue: store.clickState.newValue
+  newValue: store.clickState.newValue,
+
 });
 
 const mapDispatchToProps = dispatch =>

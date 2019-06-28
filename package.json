@@ -29,7 +29,10 @@
     ]
   },
   "devDependencies": {
+    "envify": "^4.1.0",
     "react-redux": "^7.1.0",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "uglify-js": "^3.6.0",
+    "uglifyify": "^5.0.1"
   }
 }
